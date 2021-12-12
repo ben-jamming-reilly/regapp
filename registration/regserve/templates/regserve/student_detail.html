@@ -9,7 +9,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="container mt-5 mt-5 text-center">
+  <body class="container mt-5 text-center">
     <div id="table_div">
       <table class="table">
         <thead class="thead-light">
@@ -26,26 +26,29 @@
           </tr>
         </thead>
         <tbody>
-          {% for student in object_list %}
           <tr>
-            <td>{{ student.id }}</td>
-            <td>{{ student.firstname }}</td>
-            <td>{{ student.lastname }}</td>
-            <td>{{ student.idnumber }}</td>
-            <td>{{ student.schoolyear }}</td>
-            <td>{{ student.major }}</td>
-            <td>{{ student.gpa }}</td>
-            <td>{{ student.datecreated }}</td>
-            <td>{{ student.datemodified }}</td>
-            <td><a href="{{ student.id }}">More</a></td>
+            <td>{{ object.id }}</td>
+            <td>{{ object.firstname }}</td>
+            <td>{{ object.lastname }}</td>
+            <td>{{ object.idnumber }}</td>
+            <td>{{ object.schoolyear }}</td>
+            <td>{{ object.major }}</td>
+            <td>{{ object.gpa }}</td>
+            <td>{{ object.datecreated }}</td>
+            <td>{{ object.datemodified }}</td>
           </tr>
-          {% endfor %}
         </tbody>
       </table>
     </div>
     <div>
       <p>
-        <a href="create"> Create </a>
+        <a href="/regserve/students/"> Back </a>
+      </p>
+      <p>
+        <a href="delete"> DELETE </a>
+      </p>
+      <p>
+        <a href="update"> UPDATE </a>
       </p>
     </div>
   </body>
