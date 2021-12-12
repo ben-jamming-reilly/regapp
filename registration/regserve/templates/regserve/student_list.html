@@ -37,7 +37,11 @@
             <td>{{ student.gpa }}</td>
             <td>{{ student.datecreated }}</td>
             <td>{{ student.datemodified }}</td>
-            <td><a href="{{ student.id }}">More</a></td>
+            <td>
+              <a href="{{ student.id }}" class="btn btn-outline-secondary"
+                >more</a
+              >
+            </td>
           </tr>
           {% endfor %}
         </tbody>
@@ -45,7 +49,7 @@
     </div>
     <div>
       <p>
-        <a href="create"> Create </a>
+        <a href="create" class="btn btn-primary"> create </a>
       </p>
     </div>
   </body>
